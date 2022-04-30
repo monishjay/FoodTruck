@@ -4,7 +4,7 @@ MVC web app which allows customers / admin to log in to local food truck site. C
 
 When logging on to website, you may register a new "Customer" account, or use this login:
 
-Username: //<span></span>customer123@gmail.com
+Username: http://<i></i>example.com
 
 
 Password: customer123
