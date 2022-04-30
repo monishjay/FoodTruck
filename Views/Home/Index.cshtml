@@ -1,0 +1,34 @@
+@model IEnumerable<Jayakumar_Monish_HW4.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1> Welcome to Our Food Truck!</h1>
+<table class="table">
+    <form asp-action="Index" asp-controller="Home" method="get">
+        <p class="form-group">
+            <a asp-action="Index" asp-controller="Products" class="btn btn-success">View Our Products</a>
+        </p>
+
+
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            <p class="form-group">
+                <a asp-action="Index" asp-controller="Orders" class="btn btn-success">View Orders</a>
+            </p>
+            @if (User.IsInRole("Admin"))
+            {
+
+                <p class="form-group">
+                    <a asp-action="Index" asp-controller="Suppliers" class="btn btn-success">View Our Suppliers</a>
+                </p>
+                <p class="form-group">
+                    <a asp-action="Index" asp-controller="RoleAdmin" class="btn btn-success">Manage Users</a>
+                </p>
+            }
+        }
+    </form>
+
+  
